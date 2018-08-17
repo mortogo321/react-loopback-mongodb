@@ -24,13 +24,13 @@ yarn start or node .
 
 to access api explorer, go to http://localhost:3000/__explorer
 
-##### react-admin
+##### react
 ~~~
 cd web
 yarn start or npm start
 ~~~
 
-and go to http://localhost:4000  
+and go to http://localhost:3001  
 default user credential
 
 ~~~
