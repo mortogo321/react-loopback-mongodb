@@ -1,6 +1,6 @@
 ## React - Loopback - MongoDB
 
-The demo of React with Loopbac and MongoDB
+The demo of React with Loopback and MongoDB
 
 ### installation
 ##### loopback
