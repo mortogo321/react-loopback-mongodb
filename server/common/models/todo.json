@@ -6,22 +6,38 @@
     "validateUpsert": true
   },
   "properties": {
-    "todo": {
+    "title": {
       "type": "string",
       "required": true
+    },
+    "desc": {
+      "type": "string"
     },
     "status": {
       "type": "boolean",
       "required": true,
       "default": false
     },
-    "owner": {
-      "type": "string",
+    "date": {
+      "type": "date",
       "required": true
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "ownerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
   "methods": {}
 }
