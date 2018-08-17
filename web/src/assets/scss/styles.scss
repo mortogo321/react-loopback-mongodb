@@ -1,1 +1,9 @@
-body {}
+@import 'variables.scss';
+@import 'bootstrap/scss/bootstrap.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~alertifyjs/build/css/alertify.min.css';
+@import '~alertifyjs/build/css/themes/default.min.css';
+@import 'main.scss';
