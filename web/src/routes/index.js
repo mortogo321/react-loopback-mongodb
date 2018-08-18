@@ -11,7 +11,9 @@ import store from '../store';
 import {
   Home,
   Login,
-  Todo
+  Todo,
+  TodoAdd,
+  TodoEdit
 } from '../pages';
 
 const authCheck = (role) => {
@@ -53,7 +55,9 @@ class Routes extends Component {
       <Switch>
         <Route path="/auth/login" component={Login} />
 
-        <AuthRoute for="member" path="/todo" component={Todo} />
+        <AuthRoute path="/todo/add" component={TodoAdd} />
+        <AuthRoute path="/todo/edit/:id" component={TodoEdit} />
+        <AuthRoute path="/todo" component={Todo} />
 
         <Route exact path="/" component={Home} />
         <Route render={() => (<Redirect to="/" />)} />
