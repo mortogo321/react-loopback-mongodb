@@ -26,6 +26,7 @@
     "eslint": "6.1.0",
     "eslint-config-loopback": "13.1.0",
     "nsp": "3.2.1",
+    "remarkable": "^1.7.1",
     "swagger-ui": "^3.23.1"
   },
   "repository": {
