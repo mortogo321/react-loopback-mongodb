@@ -25,7 +25,8 @@
   "devDependencies": {
     "eslint": "6.1.0",
     "eslint-config-loopback": "13.1.0",
-    "nsp": "3.2.1"
+    "nsp": "3.2.1",
+    "swagger-ui": "^3.23.1"
   },
   "repository": {
     "type": "",
