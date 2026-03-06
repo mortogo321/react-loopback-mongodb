@@ -12,22 +12,22 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
-    "compression": "1.7.4",
-    "cors": "2.8.5",
-    "helmet": "3.19.0",
-    "loopback": "3.26.0",
+    "compression": "1.8.1",
+    "cors": "2.8.6",
+    "helmet": "8.1.0",
+    "loopback": "3.28.0",
     "loopback-boot": "3.3.1",
-    "loopback-component-explorer": "6.4.0",
-    "loopback-connector-mongodb": "5.0.0",
-    "serve-favicon": "2.5.0",
-    "strong-error-handler": "3.2.0"
+    "loopback-component-explorer": "6.5.1",
+    "loopback-connector-mongodb": "7.0.2",
+    "serve-favicon": "2.5.1",
+    "strong-error-handler": "5.0.28"
   },
   "devDependencies": {
-    "eslint": "6.1.0",
-    "eslint-config-loopback": "13.1.0",
+    "eslint": "10.0.2",
+    "eslint-config-loopback": "14.0.0",
     "nsp": "3.2.1",
-    "remarkable": "^1.7.1",
-    "swagger-ui": "^3.23.1"
+    "remarkable": "^2.0.1",
+    "swagger-ui": "^5.32.0"
   },
   "repository": {
     "type": "",
