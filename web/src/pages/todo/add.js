@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { withFormik } from 'formik';
 import { Link } from 'react-router-dom';
@@ -18,7 +17,7 @@ import {
 
 import store from '../../store';
 import validators from '../../validators';
-import { Header } from '../../shared';
+import { Header, withRouter } from '../../shared';
 
 const mapState = state => ({
   loading: state.loading.models.todo,

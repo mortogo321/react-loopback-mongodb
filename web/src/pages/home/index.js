@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
 import alertify from 'alertifyjs';
 import {
   Container,
@@ -12,7 +11,7 @@ import {
 } from 'reactstrap';
 
 import store from '../../store';
-import { Header } from '../../shared';
+import { Header, withRouter } from '../../shared';
 
 const mapState = state => ({
   auth: state.auth,

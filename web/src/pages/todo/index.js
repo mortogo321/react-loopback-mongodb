@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import alertify from 'alertifyjs';
 import moment from 'moment';
@@ -107,4 +106,4 @@ class Todo extends Component {
   }
 }
 
-export default withRouter(connect(mapState)(Todo));
+export default connect(mapState)(Todo);

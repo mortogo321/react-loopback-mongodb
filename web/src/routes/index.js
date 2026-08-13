@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import React from 'react';
 import alertify from 'alertifyjs';
 import {
-  Redirect,
+  Navigate,
   Route,
-  Switch
+  Routes,
+  useLocation
 } from 'react-router-dom';
 
 import store from '../store';
@@ -16,7 +16,7 @@ import {
   TodoEdit
 } from '../pages';
 
-const authCheck = (role) => {
+const authCheck = () => {
   let isValid = false;
   let state = store.getState();
 
@@ -31,39 +31,30 @@ const authCheck = (role) => {
   return isValid;
 }
 
-const AuthRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={props => (authCheck(rest.for, props)) ?
-      (
-        <Component {...props} />
-      ) : (
-        <Redirect
-          to={{
-            pathname: '/auth/login',
-            state: { from: props.location }
-          }}
-        />
-      )
-    }
-  />
+const AuthRoute = ({ children }) => {
+  const location = useLocation();
+
+  return authCheck() ?
+    children : (
+      <Navigate
+        to="/auth/login"
+        state={{ from: location }}
+        replace
+      />
+    );
+};
+
+const AppRoutes = () => (
+  <Routes>
+    <Route path="/auth/login" element={<Login />} />
+
+    <Route path="/todo/add" element={<AuthRoute><TodoAdd /></AuthRoute>} />
+    <Route path="/todo/edit/:id" element={<AuthRoute><TodoEdit /></AuthRoute>} />
+    <Route path="/todo" element={<AuthRoute><Todo /></AuthRoute>} />
+
+    <Route path="/" element={<Home />} />
+    <Route path="*" element={<Navigate to="/" replace />} />
+  </Routes>
 );
 
-class Routes extends Component {
-  render() {
-    return (
-      <Switch>
-        <Route path="/auth/login" component={Login} />
-
-        <AuthRoute path="/todo/add" component={TodoAdd} />
-        <AuthRoute path="/todo/edit/:id" component={TodoEdit} />
-        <AuthRoute path="/todo" component={Todo} />
-
-        <Route exact path="/" component={Home} />
-        <Route render={() => (<Redirect to="/" />)} />
-      </Switch>
-    )
-  }
-}
-
-export default withRouter(Routes);
+export default AppRoutes;
