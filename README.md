@@ -30,14 +30,14 @@ web/
 
 ## Quickstart
 
-Prerequisites: Node.js, Yarn, and a running MongoDB instance on `localhost:27017` (database name `react-loopback`, configurable in `server/server/datasources.json`).
+Prerequisites: Node.js, Bun, and a running MongoDB instance on `localhost:27017` (database name `react-loopback`, configurable in `server/server/datasources.json`).
 
 **Backend**
 
 ```
 cd server
-yarn install
-yarn start
+bun install
+bun run start
 ```
 
 API Explorer: http://localhost:3000/__explorer
@@ -46,8 +46,8 @@ API Explorer: http://localhost:3000/__explorer
 
 ```
 cd web
-yarn install
-yarn start
+bun install
+bun run start
 ```
 
 App: http://localhost:3001 (port configurable via `PORT` in `web/.env`)
@@ -63,7 +63,7 @@ password: password
 
 ```
 cd web
-yarn build
+bun run build
 ```
 
 This builds the React app and moves the output into `server/client`, so the LoopBack server can serve the frontend directly.
