@@ -1,6 +1,8 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "private": true,
+  "packageManager": "bun@1.4.2",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -9,7 +11,7 @@
     "lint": "eslint .",
     "start": "node .",
     "start-dev": "nodemon .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "bun run lint && nsp check"
   },
   "dependencies": {
     "compression": "1.8.1",
