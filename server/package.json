@@ -5,31 +5,30 @@
   "packageManager": "bun@1.4.2",
   "main": "server/server.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=20"
   },
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
     "start-dev": "nodemon .",
-    "posttest": "bun run lint && nsp check"
+    "test": "eslint ."
   },
   "dependencies": {
-    "compression": "1.8.1",
+    "compression": "1.8.2",
     "cors": "2.8.6",
     "helmet": "8.3.0",
     "loopback": "3.28.0",
     "loopback-boot": "3.3.1",
     "loopback-component-explorer": "6.5.1",
-    "loopback-connector-mongodb": "8.0.1",
+    "loopback-connector-mongodb": "8.0.2",
     "serve-favicon": "2.5.1",
-    "strong-error-handler": "6.0.0"
+    "strong-error-handler": "6.0.2"
   },
   "devDependencies": {
-    "eslint": "10.8.1",
+    "eslint": "10.11.0",
     "eslint-config-loopback": "14.0.0",
-    "nsp": "3.2.1",
     "remarkable": "^2.0.1",
-    "swagger-ui": "^5.32.0"
+    "swagger-ui": "^5.33.0"
   },
   "repository": {
     "type": "",
